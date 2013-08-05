@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C904EB4717AEA27F00D5F830 /* UPNSpeakerListModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C904EB4617AEA27F00D5F830 /* UPNSpeakerListModelTest.m */; };
+		C904EB4817AEA28500D5F830 /* UPNSpeakerListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4D017ACB79D00A5A1AE /* UPNSpeakerListModel.m */; };
 		C991F45B17ACAF5200A5A1AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45A17ACAF5200A5A1AE /* UIKit.framework */; };
 		C991F45D17ACAF5200A5A1AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45C17ACAF5200A5A1AE /* Foundation.framework */; };
 		C991F45F17ACAF5200A5A1AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45E17ACAF5200A5A1AE /* CoreGraphics.framework */; };
@@ -23,6 +25,18 @@
 		C991F48117ACAF5300A5A1AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45C17ACAF5200A5A1AE /* Foundation.framework */; };
 		C991F48917ACAF5300A5A1AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C991F48717ACAF5300A5A1AE /* InfoPlist.strings */; };
 		C991F48C17ACAF5300A5A1AE /* Up_NextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F48B17ACAF5300A5A1AE /* Up_NextTests.m */; };
+		C991F4CE17ACB74600A5A1AE /* UPNEditListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4CD17ACB74600A5A1AE /* UPNEditListViewController.m */; };
+		C991F4D117ACB79D00A5A1AE /* UPNSpeakerListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4D017ACB79D00A5A1AE /* UPNSpeakerListModel.m */; };
+		C991F4D417ACBC7F00A5A1AE /* UPNAddSpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4D317ACBC7F00A5A1AE /* UPNAddSpeakerViewController.m */; };
+		C991F4D717AD5C3200A5A1AE /* UPNWalkthruViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4D617AD5C3200A5A1AE /* UPNWalkthruViewController.m */; };
+		C991F4D917AD5F6F00A5A1AE /* Repeat-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C991F4D817AD5F6F00A5A1AE /* Repeat-1@2x.png */; };
+		C991F4DB17AD5F7D00A5A1AE /* Repeat-1.png in Resources */ = {isa = PBXBuildFile; fileRef = C991F4DA17AD5F7D00A5A1AE /* Repeat-1.png */; };
+		C991F4DD17AD742200A5A1AE /* Info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C991F4DC17AD742200A5A1AE /* Info@2x.png */; };
+		C991F4DF17AD742B00A5A1AE /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = C991F4DE17AD742B00A5A1AE /* Info.png */; };
+		C991F4E217AD9A5D00A5A1AE /* UPNClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E117AD9A5D00A5A1AE /* UPNClockModel.m */; };
+		C991F4E817AD9AA900A5A1AE /* UPNClockModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */; };
+		C991F4E917AD9AB800A5A1AE /* UPNClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E117AD9A5D00A5A1AE /* UPNClockModel.m */; };
+		C991F4ED17AE068F00A5A1AE /* UPNTimeUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C904EB4517AEA27F00D5F830 /* UPNSpeakerListModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNSpeakerListModelTest.h; sourceTree = "<group>"; };
+		C904EB4617AEA27F00D5F830 /* UPNSpeakerListModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNSpeakerListModelTest.m; sourceTree = "<group>"; };
 		C991F45717ACAF5200A5A1AE /* Up Next.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Up Next.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C991F45A17ACAF5200A5A1AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C991F45C17ACAF5200A5A1AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +74,24 @@
 		C991F48817ACAF5300A5A1AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C991F48A17ACAF5300A5A1AE /* Up_NextTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Up_NextTests.h; sourceTree = "<group>"; };
 		C991F48B17ACAF5300A5A1AE /* Up_NextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Up_NextTests.m; sourceTree = "<group>"; };
+		C991F4CC17ACB74600A5A1AE /* UPNEditListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNEditListViewController.h; sourceTree = "<group>"; };
+		C991F4CD17ACB74600A5A1AE /* UPNEditListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNEditListViewController.m; sourceTree = "<group>"; };
+		C991F4CF17ACB79D00A5A1AE /* UPNSpeakerListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNSpeakerListModel.h; sourceTree = "<group>"; };
+		C991F4D017ACB79D00A5A1AE /* UPNSpeakerListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNSpeakerListModel.m; sourceTree = "<group>"; };
+		C991F4D217ACBC7F00A5A1AE /* UPNAddSpeakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNAddSpeakerViewController.h; sourceTree = "<group>"; };
+		C991F4D317ACBC7F00A5A1AE /* UPNAddSpeakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNAddSpeakerViewController.m; sourceTree = "<group>"; };
+		C991F4D517AD5C3200A5A1AE /* UPNWalkthruViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNWalkthruViewController.h; sourceTree = "<group>"; };
+		C991F4D617AD5C3200A5A1AE /* UPNWalkthruViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNWalkthruViewController.m; sourceTree = "<group>"; };
+		C991F4D817AD5F6F00A5A1AE /* Repeat-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Repeat-1@2x.png"; sourceTree = "<group>"; };
+		C991F4DA17AD5F7D00A5A1AE /* Repeat-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Repeat-1.png"; sourceTree = "<group>"; };
+		C991F4DC17AD742200A5A1AE /* Info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info@2x.png"; sourceTree = "<group>"; };
+		C991F4DE17AD742B00A5A1AE /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info.png; sourceTree = "<group>"; };
+		C991F4E017AD9A5D00A5A1AE /* UPNClockModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNClockModel.h; sourceTree = "<group>"; };
+		C991F4E117AD9A5D00A5A1AE /* UPNClockModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNClockModel.m; sourceTree = "<group>"; };
+		C991F4E617AD9AA900A5A1AE /* UPNClockModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNClockModelTest.h; sourceTree = "<group>"; };
+		C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNClockModelTest.m; sourceTree = "<group>"; };
+		C991F4EB17AE068F00A5A1AE /* UPNTimeUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNTimeUpdateViewController.h; sourceTree = "<group>"; };
+		C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNTimeUpdateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C904EB4917AF4FCA00D5F830 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C991F47517ACAF5200A5A1AE /* UPNViewController.h */,
+				C991F47617ACAF5200A5A1AE /* UPNViewController.m */,
+				C991F4CC17ACB74600A5A1AE /* UPNEditListViewController.h */,
+				C991F4CD17ACB74600A5A1AE /* UPNEditListViewController.m */,
+				C991F4D217ACBC7F00A5A1AE /* UPNAddSpeakerViewController.h */,
+				C991F4D317ACBC7F00A5A1AE /* UPNAddSpeakerViewController.m */,
+				C991F4D517AD5C3200A5A1AE /* UPNWalkthruViewController.h */,
+				C991F4D617AD5C3200A5A1AE /* UPNWalkthruViewController.m */,
+				C991F4EB17AE068F00A5A1AE /* UPNTimeUpdateViewController.h */,
+				C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		C991F44E17ACAF5200A5A1AE = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +168,13 @@
 		C991F46017ACAF5200A5A1AE /* Up Next */ = {
 			isa = PBXGroup;
 			children = (
+				C991F4EA17ADD9AD00A5A1AE /* Graphics */,
 				C991F46917ACAF5200A5A1AE /* UPNAppDelegate.h */,
 				C991F46A17ACAF5200A5A1AE /* UPNAppDelegate.m */,
 				C991F47217ACAF5200A5A1AE /* MainStoryboard.storyboard */,
-				C991F47517ACAF5200A5A1AE /* UPNViewController.h */,
-				C991F47617ACAF5200A5A1AE /* UPNViewController.m */,
+				C904EB4917AF4FCA00D5F830 /* Controllers */,
 				C991F46117ACAF5200A5A1AE /* Supporting Files */,
+				C991F4E517AD9A7500A5A1AE /* Models */,
 			);
 			path = "Up Next";
 			sourceTree = "<group>";
@@ -147,6 +199,10 @@
 				C991F48A17ACAF5300A5A1AE /* Up_NextTests.h */,
 				C991F48B17ACAF5300A5A1AE /* Up_NextTests.m */,
 				C991F48517ACAF5300A5A1AE /* Supporting Files */,
+				C991F4E617AD9AA900A5A1AE /* UPNClockModelTest.h */,
+				C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */,
+				C904EB4517AEA27F00D5F830 /* UPNSpeakerListModelTest.h */,
+				C904EB4617AEA27F00D5F830 /* UPNSpeakerListModelTest.m */,
 			);
 			path = "Up NextTests";
 			sourceTree = "<group>";
@@ -158,6 +214,44 @@
 				C991F48717ACAF5300A5A1AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C991F4E317AD9A6100A5A1AE /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				C991F4E017AD9A5D00A5A1AE /* UPNClockModel.h */,
+				C991F4E117AD9A5D00A5A1AE /* UPNClockModel.m */,
+			);
+			name = Clock;
+			sourceTree = "<group>";
+		};
+		C991F4E417AD9A6F00A5A1AE /* Speaker List */ = {
+			isa = PBXGroup;
+			children = (
+				C991F4CF17ACB79D00A5A1AE /* UPNSpeakerListModel.h */,
+				C991F4D017ACB79D00A5A1AE /* UPNSpeakerListModel.m */,
+			);
+			name = "Speaker List";
+			sourceTree = "<group>";
+		};
+		C991F4E517AD9A7500A5A1AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C991F4E417AD9A6F00A5A1AE /* Speaker List */,
+				C991F4E317AD9A6100A5A1AE /* Clock */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C991F4EA17ADD9AD00A5A1AE /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				C991F4DE17AD742B00A5A1AE /* Info.png */,
+				C991F4DC17AD742200A5A1AE /* Info@2x.png */,
+				C991F4DA17AD5F7D00A5A1AE /* Repeat-1.png */,
+				C991F4D817AD5F6F00A5A1AE /* Repeat-1@2x.png */,
+			);
+			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +331,10 @@
 				C991F46F17ACAF5200A5A1AE /* Default@2x.png in Resources */,
 				C991F47117ACAF5200A5A1AE /* Default-568h@2x.png in Resources */,
 				C991F47417ACAF5200A5A1AE /* MainStoryboard.storyboard in Resources */,
+				C991F4D917AD5F6F00A5A1AE /* Repeat-1@2x.png in Resources */,
+				C991F4DB17AD5F7D00A5A1AE /* Repeat-1.png in Resources */,
+				C991F4DD17AD742200A5A1AE /* Info@2x.png in Resources */,
+				C991F4DF17AD742B00A5A1AE /* Info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +372,12 @@
 				C991F46717ACAF5200A5A1AE /* main.m in Sources */,
 				C991F46B17ACAF5200A5A1AE /* UPNAppDelegate.m in Sources */,
 				C991F47717ACAF5200A5A1AE /* UPNViewController.m in Sources */,
+				C991F4CE17ACB74600A5A1AE /* UPNEditListViewController.m in Sources */,
+				C991F4D117ACB79D00A5A1AE /* UPNSpeakerListModel.m in Sources */,
+				C991F4D417ACBC7F00A5A1AE /* UPNAddSpeakerViewController.m in Sources */,
+				C991F4D717AD5C3200A5A1AE /* UPNWalkthruViewController.m in Sources */,
+				C991F4E217AD9A5D00A5A1AE /* UPNClockModel.m in Sources */,
+				C991F4ED17AE068F00A5A1AE /* UPNTimeUpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C991F48C17ACAF5300A5A1AE /* Up_NextTests.m in Sources */,
+				C991F4E817AD9AA900A5A1AE /* UPNClockModelTest.m in Sources */,
+				C991F4E917AD9AB800A5A1AE /* UPNClockModel.m in Sources */,
+				C904EB4717AEA27F00D5F830 /* UPNSpeakerListModelTest.m in Sources */,
+				C904EB4817AEA28500D5F830 /* UPNSpeakerListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +562,7 @@
 				C991F49117ACAF5300A5A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C991F49217ACAF5300A5A1AE /* Build configuration list for PBXNativeTarget "Up NextTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +571,7 @@
 				C991F49417ACAF5300A5A1AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

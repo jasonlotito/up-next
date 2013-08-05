@@ -10,4 +10,7 @@
 
 @interface UPNViewController : UIViewController
 
+-(IBAction)goBack:(UIStoryboardSegue *) segue;
+-(IBAction)flipBack:(UIStoryboardSegue *) segue;
+
 @end
