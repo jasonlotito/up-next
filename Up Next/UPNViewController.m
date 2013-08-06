@@ -15,9 +15,17 @@ const NSString *timeUpdateSegue = @"timeUpdateSegue";
 @interface UPNViewController ()
 @property (weak, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 @property (weak, nonatomic) IBOutlet UISwipeGestureRecognizer *upGesture;
+
 @property (weak, nonatomic) IBOutlet UILabel *currentPresenterName;
 @property (weak, nonatomic) IBOutlet UILabel *nextPresenterName;
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currentPresenterAnimated;
+@property (weak, nonatomic) IBOutlet UILabel *nextPresenterAnimated;
+@property (weak, nonatomic) IBOutlet UILabel *nextPresenterFromBelow;
+
+@property (assign, nonatomic) CGPoint nextPresenterAnimatedStartingPoint;
+@property (assign, nonatomic) CGPoint nextPresenterHiddenStartingPoint;
+
 @property (assign, nonatomic) BOOL timerRunning;
 @property (strong, nonatomic) NSTimer *timer;
 @property (assign, nonatomic) NSUInteger time;
@@ -58,6 +66,91 @@ const NSString *timeUpdateSegue = @"timeUpdateSegue";
 //    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
 //    datePicker.datePickerMode = UIDatePickerModeCountDownTimer;
 //    [self.view addSubview:datePicker];
+}
+//
+//-(IBAction)swipeUpOnNextSpeaker:(UISwipeGestureRecognizer *)sender {
+//    NSLog(@"swipe up");
+//}
+- (IBAction)swipeUpOnNextSpeaker:(UIPanGestureRecognizer *)sender {
+    CGPoint point = [sender translationInView:self.view];
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        if(point.y <= -50){
+            self.currentPresenterName.hidden = YES;
+            self.currentPresenterAnimated.hidden = NO;
+
+            [UIView animateWithDuration:0.5 animations:^{
+                NSLog(@"Staring animation");
+                
+                [self.nextPresenterAnimated setFrame:self.currentPresenterName.frame];
+                self.nextPresenterAnimated.alpha = 1.0;
+                [self.currentPresenterAnimated setFrame:CGRectMake(self.currentPresenterAnimated.frame.origin.x,
+                                                                  self.currentPresenterAnimated.frame.origin.y - 100,
+                                                                  self.currentPresenterAnimated.frame.size.width,
+                                                                  self.currentPresenterAnimated.frame.size.height)];
+                self.nextPresenterFromBelow.hidden = NO;
+                [self.nextPresenterFromBelow setFrame:self.nextPresenterName.frame];
+
+            } completion:^(BOOL finished) {
+                [self.nextPresenterAnimated setFrame:CGRectMake(self.nextPresenterAnimatedStartingPoint.x,
+                                                                self.nextPresenterAnimatedStartingPoint.y,
+                                                                self.nextPresenterAnimated.frame.size.width,
+                                                                self.nextPresenterAnimated.frame.size.height)];
+                [self.nextPresenterFromBelow setFrame:CGRectMake(self.nextPresenterHiddenStartingPoint.x,
+                                                                 self.nextPresenterHiddenStartingPoint.y,
+                                                                 self.nextPresenterFromBelow.frame.size.width,
+                                                                 self.nextPresenterFromBelow.frame.size.height)];
+                
+                [self.nextPresenterAnimated setFrame:self.nextPresenterName.frame];
+                
+                [self.currentPresenterAnimated setFrame:self.currentPresenterName.frame];
+                self.currentPresenterName.text = self.nextPresenterName.text;
+                self.nextPresenterName.hidden = NO;
+                self.nextPresenterAnimated.hidden = YES;
+                self.nextPresenterAnimated.alpha = 0.5;
+                self.currentPresenterName.hidden = NO;
+                self.currentPresenterAnimated.hidden = YES;
+                self.nextPresenterAnimatedStartingPoint = CGPointMake(0, 0);
+                self.nextPresenterFromBelow.hidden = YES;
+
+            }];
+            
+        } else {
+            [UIView animateWithDuration:0.5 animations:^{
+                [self.nextPresenterAnimated setFrame:CGRectMake(self.nextPresenterAnimatedStartingPoint.x,
+                                                                self.nextPresenterAnimatedStartingPoint.y,
+                                                                self.nextPresenterAnimated.frame.size.width,
+                                                                self.nextPresenterAnimated.frame.size.height)];
+                [self.nextPresenterFromBelow setFrame:CGRectMake(self.nextPresenterHiddenStartingPoint.x,
+                                                                 self.nextPresenterHiddenStartingPoint.y,
+                                                                 self.nextPresenterFromBelow.frame.size.width,
+                                                                 self.nextPresenterFromBelow.frame.size.height)];
+            } completion:^(BOOL finished) {
+                self.nextPresenterName.hidden = NO;
+                self.nextPresenterAnimated.hidden = YES;
+            }];
+        }
+        
+        NSLog(@"Ended Gesture");
+        return;
+    }
+    
+    if( self.nextPresenterAnimatedStartingPoint.x == 0 ) {
+        self.nextPresenterAnimatedStartingPoint = self.nextPresenterAnimated.frame.origin;
+    }
+    
+    if( self.nextPresenterHiddenStartingPoint.x == 0 ) {
+        self.nextPresenterHiddenStartingPoint = self.nextPresenterFromBelow.frame.origin;
+    }
+    
+    NSLog(@"swipe up x: %f, y: %f", [sender translationInView:self.view].x, [sender translationInView:self.view].y);
+
+    self.nextPresenterName.hidden = YES;
+    self.nextPresenterAnimated.hidden = NO;
+    [self.nextPresenterAnimated setFrame:CGRectMake(self.nextPresenterAnimatedStartingPoint.x,
+                                                   self.nextPresenterAnimatedStartingPoint.y + point.y,
+                                                   self.nextPresenterAnimated.frame.size.width,
+                                                   self.nextPresenterAnimated.frame.size.height)];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -144,10 +237,10 @@ const NSString *timeUpdateSegue = @"timeUpdateSegue";
 {
     __block UPNViewController *vc = self;
     [clock atMinutes:0
-                  seconds:2
-               soundAlarm:^{
-                   [vc soundAlarm];
-               }];
+             seconds:30
+          soundAlarm:^{
+              [vc soundAlarm];
+          }];
     
     clock.clockFinished = ^{
         [vc finishTimer];
