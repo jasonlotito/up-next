@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C904EB4717AEA27F00D5F830 /* UPNSpeakerListModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C904EB4617AEA27F00D5F830 /* UPNSpeakerListModelTest.m */; };
 		C904EB4817AEA28500D5F830 /* UPNSpeakerListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4D017ACB79D00A5A1AE /* UPNSpeakerListModel.m */; };
+		C957EE5E17BFF87600B7D287 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C957EE5D17BFF87600B7D287 /* QuartzCore.framework */; };
 		C991F45B17ACAF5200A5A1AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45A17ACAF5200A5A1AE /* UIKit.framework */; };
 		C991F45D17ACAF5200A5A1AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45C17ACAF5200A5A1AE /* Foundation.framework */; };
 		C991F45F17ACAF5200A5A1AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C991F45E17ACAF5200A5A1AE /* CoreGraphics.framework */; };
@@ -37,6 +38,12 @@
 		C991F4E817AD9AA900A5A1AE /* UPNClockModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */; };
 		C991F4E917AD9AB800A5A1AE /* UPNClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E117AD9A5D00A5A1AE /* UPNClockModel.m */; };
 		C991F4ED17AE068F00A5A1AE /* UPNTimeUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */; };
+		C9FECC7417B207A20079814E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7317B207A20079814E /* icon@2x.png */; };
+		C9FECC7617B208950079814E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7517B208950079814E /* icon.png */; };
+		C9FECC7817B209330079814E /* Microphone-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7717B209330079814E /* Microphone-2@2x.png */; };
+		C9FECC7A17B209430079814E /* Microphone-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7917B209430079814E /* Microphone-2.png */; };
+		C9FECC7C17B209CE0079814E /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7B17B209CE0079814E /* List.png */; };
+		C9FECC7E17B209DB0079814E /* List@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7D17B209DB0079814E /* List@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,7 @@
 /* Begin PBXFileReference section */
 		C904EB4517AEA27F00D5F830 /* UPNSpeakerListModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNSpeakerListModelTest.h; sourceTree = "<group>"; };
 		C904EB4617AEA27F00D5F830 /* UPNSpeakerListModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNSpeakerListModelTest.m; sourceTree = "<group>"; };
+		C957EE5D17BFF87600B7D287 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C991F45717ACAF5200A5A1AE /* Up Next.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Up Next.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C991F45A17ACAF5200A5A1AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C991F45C17ACAF5200A5A1AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +100,12 @@
 		C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNClockModelTest.m; sourceTree = "<group>"; };
 		C991F4EB17AE068F00A5A1AE /* UPNTimeUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNTimeUpdateViewController.h; sourceTree = "<group>"; };
 		C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNTimeUpdateViewController.m; sourceTree = "<group>"; };
+		C9FECC7317B207A20079814E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		C9FECC7517B208950079814E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C9FECC7717B209330079814E /* Microphone-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Microphone-2@2x.png"; sourceTree = "<group>"; };
+		C9FECC7917B209430079814E /* Microphone-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Microphone-2.png"; sourceTree = "<group>"; };
+		C9FECC7B17B209CE0079814E /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
+		C9FECC7D17B209DB0079814E /* List@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "List@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C957EE5E17BFF87600B7D287 /* QuartzCore.framework in Frameworks */,
 				C991F45B17ACAF5200A5A1AE /* UIKit.framework in Frameworks */,
 				C991F45D17ACAF5200A5A1AE /* Foundation.framework in Frameworks */,
 				C991F45F17ACAF5200A5A1AE /* CoreGraphics.framework in Frameworks */,
@@ -138,6 +153,8 @@
 		C991F44E17ACAF5200A5A1AE = {
 			isa = PBXGroup;
 			children = (
+				C9FECC7517B208950079814E /* icon.png */,
+				C9FECC7317B207A20079814E /* icon@2x.png */,
 				C991F46017ACAF5200A5A1AE /* Up Next */,
 				C991F48417ACAF5300A5A1AE /* Up NextTests */,
 				C991F45917ACAF5200A5A1AE /* Frameworks */,
@@ -157,6 +174,7 @@
 		C991F45917ACAF5200A5A1AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C957EE5D17BFF87600B7D287 /* QuartzCore.framework */,
 				C991F45A17ACAF5200A5A1AE /* UIKit.framework */,
 				C991F45C17ACAF5200A5A1AE /* Foundation.framework */,
 				C991F45E17ACAF5200A5A1AE /* CoreGraphics.framework */,
@@ -246,6 +264,10 @@
 		C991F4EA17ADD9AD00A5A1AE /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				C9FECC7B17B209CE0079814E /* List.png */,
+				C9FECC7D17B209DB0079814E /* List@2x.png */,
+				C9FECC7917B209430079814E /* Microphone-2.png */,
+				C9FECC7717B209330079814E /* Microphone-2@2x.png */,
 				C991F4DE17AD742B00A5A1AE /* Info.png */,
 				C991F4DC17AD742200A5A1AE /* Info@2x.png */,
 				C991F4DA17AD5F7D00A5A1AE /* Repeat-1.png */,
@@ -302,6 +324,11 @@
 				CLASSPREFIX = UPN;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Jason Lotito";
+				TargetAttributes = {
+					C991F45617ACAF5200A5A1AE = {
+						DevelopmentTeam = 47UF97CY9G;
+					};
+				};
 			};
 			buildConfigurationList = C991F45217ACAF5200A5A1AE /* Build configuration list for PBXProject "Up Next" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -335,6 +362,12 @@
 				C991F4DB17AD5F7D00A5A1AE /* Repeat-1.png in Resources */,
 				C991F4DD17AD742200A5A1AE /* Info@2x.png in Resources */,
 				C991F4DF17AD742B00A5A1AE /* Info.png in Resources */,
+				C9FECC7417B207A20079814E /* icon@2x.png in Resources */,
+				C9FECC7617B208950079814E /* icon.png in Resources */,
+				C9FECC7817B209330079814E /* Microphone-2@2x.png in Resources */,
+				C9FECC7A17B209430079814E /* Microphone-2.png in Resources */,
+				C9FECC7C17B209CE0079814E /* List.png in Resources */,
+				C9FECC7E17B209DB0079814E /* List@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +523,7 @@
 		C991F49017ACAF5300A5A1AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Up Next/Up Next-Prefix.pch";
 				INFOPLIST_FILE = "Up Next/Up Next-Info.plist";
@@ -501,6 +535,7 @@
 		C991F49117ACAF5300A5A1AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Up Next/Up Next-Prefix.pch";
 				INFOPLIST_FILE = "Up Next/Up Next-Info.plist";

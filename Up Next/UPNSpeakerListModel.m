@@ -12,6 +12,7 @@
 
 @interface UPNSpeakerListModel ()
 @property (strong, nonatomic) NSMutableArray *speakerList;
+@property (assign, nonatomic) NSUInteger pointer;
 @end
 
 @implementation UPNSpeakerListModel
@@ -57,7 +58,8 @@
             }
         }
         
-        _count =  _speakerList.count;
+        _pointer = 0;
+        _count = _speakerList.count;
     }
 
     return self;
@@ -77,14 +79,45 @@
     return self.count - 1;
 }
 
+-(void)addSpeaker:(NSString *)speakerName atIndex:(NSUInteger)index
+{
+    [self.speakerList insertObject:speakerName atIndex:index];
+    self.count = self.speakerList.count;
+}
+
+-(void)removeSpeakerAtIndex:(NSUInteger)index
+{
+    [self.speakerList removeObjectAtIndex:index];
+    self.count = self.speakerList.count;
+}
+
 -(void)save
 {
+    self.count = self.speakerList.count;
     [[NSUserDefaults standardUserDefaults] setObject:self.speakerList forKey:SPEAKER_LIST_DEFAULTS];
 }
 
 -(id)speakerNameAtIndex: (NSUInteger)index
 {
     return self.speakerList[index];
+}
+
+-(void)resetPointer
+{
+    self.pointer = 0;
+}
+
+-(NSString *)nextSpeaker
+{
+    if(self.speakerList.count == 0){
+        return @"add speaker names";
+    }
+    
+    if(self.speakerList.count <= self.pointer ) {
+        self.pointer = 0;
+    }
+    
+    return self.speakerList[self.pointer++];
 }
 
 @end

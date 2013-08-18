@@ -20,6 +20,10 @@ typedef void(^StorageHandler)(NSMutableArray* list);
 -(id)initWithEmptySpeakerList;
 -(NSString *)speakerNameAtIndex: (NSUInteger)index;
 -(NSUInteger)addSpeaker:(NSString *)speakerName;
+-(void)addSpeaker:(NSString *)speakerName atIndex:(NSUInteger)index;
+-(NSString *)nextSpeaker;
+-(void)resetPointer;
+-(void)removeSpeakerAtIndex:(NSUInteger)index;
 -(void)save;
 
 @end

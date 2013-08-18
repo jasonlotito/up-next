@@ -11,7 +11,10 @@
 #import "UPNSpeakerListModel.h"
 
 @interface UPNEditListViewController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonAdd;
 @property (strong, nonatomic) UPNSpeakerListModel *model;
+@property (strong, nonatomic) UIView *inputView;
+@property (strong, nonatomic) UITextField *inputField;
 @end
 
 @implementation UPNEditListViewController
@@ -61,13 +64,34 @@
     // self.editing = YES;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
+    [self createInputAccessoryView];
+    [self.inputField becomeFirstResponder];
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+//    self.inputField.inputAccessoryView = self.inputView;
+}
+
+-(void)createInputAccessoryView
+{
+//    self.inputView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 310.0, 40.0)];
+//    self.inputView.backgroundColor = [UIColor redColor];
+    self.inputField = [[UITextField alloc]initWithFrame:CGRectMake(110, 0, 100, 44)];
+//    self.inputView.hidden = YES;
+    [self.view addSubview:self.inputView];
+//    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 44)];
+//    btn.titleLabel.text = @"asdf";
+//    [self.inputView addSubview:btn];
 }
 
 #pragma mark - Table view data source
@@ -103,35 +127,46 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)    tableView:(UITableView *)tableView
+   commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+    forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.model removeSpeakerAtIndex:indexPath.row];
+        [self.model save];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
+
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+- (void)    tableView:(UITableView *)tableView
+   moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
+          toIndexPath:(NSIndexPath *)toIndexPath
 {
+    NSString *stringToMove = [self.model speakerNameAtIndex:fromIndexPath.row];
+    [self.model removeSpeakerAtIndex:fromIndexPath.row];
+    [self.model addSpeaker:stringToMove atIndex:toIndexPath.row];
+    [self.model save];
 }
-*/
 
-/*
+
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+
 
 #pragma mark - Table view delegate
 

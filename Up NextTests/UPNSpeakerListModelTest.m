@@ -10,7 +10,7 @@
 #import "UPNSpeakerListModel.h"
 
 @interface UPNSpeakerListModelTest()
-@property (strong,nonatomic) UPNSpeakerListModel *model;
+@property (strong, nonatomic) UPNSpeakerListModel *model;
 @end
 
 @implementation UPNSpeakerListModelTest
