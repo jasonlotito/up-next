@@ -36,11 +36,9 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     UPNAddSpeakerViewController *inputVC = segue.destinationViewController;
-//    [self.model addObserver:self forKeyPath:@"count" options:NSKeyValueObservingOptionNew context:nil];
     
     inputVC.cancelHandler = ^{
         [self dismissViewControllerAnimated:YES completion:nil];
-//        [self.model removeObserver:self forKeyPath:@"count"];
     };
     
     inputVC.saveHandler = ^(NSString *name) {
@@ -48,8 +46,6 @@
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:row inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         [self dismissViewControllerAnimated:YES completion:nil];
-//        [self.tableView reloadData];
-//        [self.model removeObserver:self forKeyPath:@"count"];
     };
 }
 

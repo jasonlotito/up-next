@@ -38,6 +38,9 @@
 		C991F4E817AD9AA900A5A1AE /* UPNClockModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */; };
 		C991F4E917AD9AB800A5A1AE /* UPNClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4E117AD9A5D00A5A1AE /* UPNClockModel.m */; };
 		C991F4ED17AE068F00A5A1AE /* UPNTimeUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */; };
+		C9E7BC7F17C1268900413729 /* UPNSpeakerModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BC7E17C1268900413729 /* UPNSpeakerModelTest.m */; };
+		C9E7BC8217C126C300413729 /* UPNSpeakerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BC8117C126C300413729 /* UPNSpeakerModel.m */; };
+		C9E7BC8317C126C300413729 /* UPNSpeakerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E7BC8117C126C300413729 /* UPNSpeakerModel.m */; };
 		C9FECC7417B207A20079814E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7317B207A20079814E /* icon@2x.png */; };
 		C9FECC7617B208950079814E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7517B208950079814E /* icon.png */; };
 		C9FECC7817B209330079814E /* Microphone-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9FECC7717B209330079814E /* Microphone-2@2x.png */; };
@@ -100,6 +103,10 @@
 		C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNClockModelTest.m; sourceTree = "<group>"; };
 		C991F4EB17AE068F00A5A1AE /* UPNTimeUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNTimeUpdateViewController.h; sourceTree = "<group>"; };
 		C991F4EC17AE068F00A5A1AE /* UPNTimeUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNTimeUpdateViewController.m; sourceTree = "<group>"; };
+		C9E7BC7E17C1268900413729 /* UPNSpeakerModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNSpeakerModelTest.m; sourceTree = "<group>"; };
+		C9E7BC8017C126C300413729 /* UPNSpeakerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPNSpeakerModel.h; sourceTree = "<group>"; };
+		C9E7BC8117C126C300413729 /* UPNSpeakerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPNSpeakerModel.m; sourceTree = "<group>"; };
+		C9E7BC8517C1279700413729 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C9FECC7317B207A20079814E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		C9FECC7517B208950079814E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		C9FECC7717B209330079814E /* Microphone-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Microphone-2@2x.png"; sourceTree = "<group>"; };
@@ -174,6 +181,7 @@
 		C991F45917ACAF5200A5A1AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9E7BC8517C1279700413729 /* XCTest.framework */,
 				C957EE5D17BFF87600B7D287 /* QuartzCore.framework */,
 				C991F45A17ACAF5200A5A1AE /* UIKit.framework */,
 				C991F45C17ACAF5200A5A1AE /* Foundation.framework */,
@@ -221,6 +229,7 @@
 				C991F4E717AD9AA900A5A1AE /* UPNClockModelTest.m */,
 				C904EB4517AEA27F00D5F830 /* UPNSpeakerListModelTest.h */,
 				C904EB4617AEA27F00D5F830 /* UPNSpeakerListModelTest.m */,
+				C9E7BC7E17C1268900413729 /* UPNSpeakerModelTest.m */,
 			);
 			path = "Up NextTests";
 			sourceTree = "<group>";
@@ -257,6 +266,7 @@
 			children = (
 				C991F4E417AD9A6F00A5A1AE /* Speaker List */,
 				C991F4E317AD9A6100A5A1AE /* Clock */,
+				C9E7BC8417C126C700413729 /* Speaker Model */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -274,6 +284,15 @@
 				C991F4D817AD5F6F00A5A1AE /* Repeat-1@2x.png */,
 			);
 			name = Graphics;
+			sourceTree = "<group>";
+		};
+		C9E7BC8417C126C700413729 /* Speaker Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9E7BC8017C126C300413729 /* UPNSpeakerModel.h */,
+				C9E7BC8117C126C300413729 /* UPNSpeakerModel.m */,
+			);
+			name = "Speaker Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +428,7 @@
 				C991F4D117ACB79D00A5A1AE /* UPNSpeakerListModel.m in Sources */,
 				C991F4D417ACBC7F00A5A1AE /* UPNAddSpeakerViewController.m in Sources */,
 				C991F4D717AD5C3200A5A1AE /* UPNWalkthruViewController.m in Sources */,
+				C9E7BC8217C126C300413729 /* UPNSpeakerModel.m in Sources */,
 				C991F4E217AD9A5D00A5A1AE /* UPNClockModel.m in Sources */,
 				C991F4ED17AE068F00A5A1AE /* UPNTimeUpdateViewController.m in Sources */,
 			);
@@ -419,7 +439,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C991F48C17ACAF5300A5A1AE /* Up_NextTests.m in Sources */,
+				C9E7BC7F17C1268900413729 /* UPNSpeakerModelTest.m in Sources */,
 				C991F4E817AD9AA900A5A1AE /* UPNClockModelTest.m in Sources */,
+				C9E7BC8317C126C300413729 /* UPNSpeakerModel.m in Sources */,
 				C991F4E917AD9AB800A5A1AE /* UPNClockModel.m in Sources */,
 				C904EB4717AEA27F00D5F830 /* UPNSpeakerListModelTest.m in Sources */,
 				C904EB4817AEA28500D5F830 /* UPNSpeakerListModel.m in Sources */,
@@ -524,6 +546,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Up Next/Up Next-Prefix.pch";
 				INFOPLIST_FILE = "Up Next/Up Next-Info.plist";
@@ -536,6 +562,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Up Next/Up Next-Prefix.pch";
 				INFOPLIST_FILE = "Up Next/Up Next-Info.plist";
@@ -547,7 +577,6 @@
 		C991F49317ACAF5300A5A1AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Up Next.app/Up Next";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -556,7 +585,6 @@
 				GCC_PREFIX_HEADER = "Up Next/Up Next-Prefix.pch";
 				INFOPLIST_FILE = "Up NextTests/Up NextTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -564,7 +592,6 @@
 		C991F49417ACAF5300A5A1AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Up Next.app/Up Next";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -573,7 +600,6 @@
 				GCC_PREFIX_HEADER = "Up Next/Up Next-Prefix.pch";
 				INFOPLIST_FILE = "Up NextTests/Up NextTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;

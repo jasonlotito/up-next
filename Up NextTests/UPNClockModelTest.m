@@ -8,6 +8,7 @@
 
 #import "UPNClockModelTest.h"
 #import "UPNClockModel.h"
+#import "UPNAlarmModel.h"
 
 @implementation UPNClockModelTest
 - (void)setUp
@@ -91,6 +92,15 @@
     UPNClockModel *model = [[UPNClockModel alloc]initWithMinutes:5 seconds:0];
     [model decrementByMinutes:2 decrementBySeconds:30];
     STAssertTrue([model progress] == 0.5, @"Progress is at %f", [model progress]);
+}
+
+-(void)testCanAcceptAlarms
+{
+    UPNClockModel *clock = [[UPNClockModel alloc]initWithMinutes:5 seconds:0];
+    UPNAlarmModel *alarm = [[UPNAlarmModel alloc]initWithMinutes:4 seconds:59];
+    [clock atAlarm:alarm soundAlarm:^{
+        STAssertTrue(YES, @"Alarm Sounded");        
+    }];
 }
 
 @end

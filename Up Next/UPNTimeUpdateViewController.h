@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UPNTimeUpdateViewController : UIViewController
+@interface UPNTimeUpdateViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *minutes;
 @property (weak, nonatomic) IBOutlet UITextField *seconds;

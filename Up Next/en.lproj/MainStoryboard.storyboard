@@ -202,54 +202,79 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minutes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRk-tX-d37">
-                                <rect key="frame" x="160" y="60" width="140" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nRk-tX-d37">
+                                <rect key="frame" x="124" y="56" width="67" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="JNB-OG-FCY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fRA-U3-PGu" id="Qdg-kB-MGp"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" placeholder="Seconds" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7X-En-gdj">
-                                <rect key="frame" x="160" y="98" width="140" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" placeholder="Seconds" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="q7X-En-gdj">
+                                <rect key="frame" x="124" y="115" width="67" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Minutes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZK-R8-6vC">
-                                <rect key="frame" x="20" y="63" width="132" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="j5R-xf-Ngd"/>
-                                </constraints>
+                                <rect key="frame" x="28" y="60" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Seconds" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GQ-jx-chw">
-                                <rect key="frame" x="20" y="101" width="132" height="21"/>
+                                <rect key="frame" x="28" y="118" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="1" maximumValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="4O1-Jd-2VJ">
+                                <rect key="frame" x="199" y="56" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="valueChangeMinuteStepper:" destination="fRA-U3-PGu" eventType="valueChanged" id="pBE-cs-c9V"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="45" stepValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-vW-ZxM">
+                                <rect key="frame" x="199" y="115" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="valueChangeSecondStepper:" destination="fRA-U3-PGu" eventType="valueChanged" id="Pys-bh-VD5"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
                         <constraints>
-                            <constraint firstItem="q7X-En-gdj" firstAttribute="leading" secondItem="6GQ-jx-chw" secondAttribute="trailing" constant="8" symbolic="YES" id="6Qq-vj-EOa"/>
-                            <constraint firstAttribute="trailing" secondItem="q7X-En-gdj" secondAttribute="trailing" constant="20" symbolic="YES" id="KOJ-67-FjI"/>
+                            <constraint firstItem="q7X-En-gdj" firstAttribute="leading" secondItem="6GQ-jx-chw" secondAttribute="trailing" constant="8" symbolic="YES" id="7HI-9e-QW5"/>
+                            <constraint firstItem="q7X-En-gdj" firstAttribute="leading" secondItem="nRk-tX-d37" secondAttribute="leading" id="8CC-8s-muC"/>
+                            <constraint firstItem="4O1-Jd-2VJ" firstAttribute="top" secondItem="nRk-tX-d37" secondAttribute="top" id="FXj-DU-QHk"/>
+                            <constraint firstItem="hqh-vW-ZxM" firstAttribute="leading" secondItem="4O1-Jd-2VJ" secondAttribute="leading" id="GAh-DZ-XCT"/>
+                            <constraint firstItem="hZK-R8-6vC" firstAttribute="leading" secondItem="Mfl-GR-m9l" secondAttribute="leading" constant="28" id="Gt7-9f-Mjv"/>
+                            <constraint firstItem="nRk-tX-d37" firstAttribute="top" secondItem="9I9-6D-yCe" secondAttribute="bottom" constant="12" id="LjV-of-xet"/>
+                            <constraint firstItem="q7X-En-gdj" firstAttribute="top" secondItem="nRk-tX-d37" secondAttribute="bottom" constant="29" id="OZX-oR-uMp"/>
                             <constraint firstItem="9I9-6D-yCe" firstAttribute="top" secondItem="Mfl-GR-m9l" secondAttribute="top" id="PLj-KS-GNh"/>
-                            <constraint firstAttribute="trailing" secondItem="nRk-tX-d37" secondAttribute="trailing" constant="20" symbolic="YES" id="QdM-m2-xTn"/>
+                            <constraint firstItem="hqh-vW-ZxM" firstAttribute="leading" secondItem="q7X-En-gdj" secondAttribute="trailing" constant="8" symbolic="YES" id="QK4-we-dbo"/>
                             <constraint firstItem="9I9-6D-yCe" firstAttribute="trailing" secondItem="Mfl-GR-m9l" secondAttribute="trailing" id="TSU-QI-cse"/>
-                            <constraint firstItem="6GQ-jx-chw" firstAttribute="leading" secondItem="Mfl-GR-m9l" secondAttribute="leading" constant="20" symbolic="YES" id="XiQ-4e-DQ3"/>
+                            <constraint firstItem="q7X-En-gdj" firstAttribute="top" secondItem="hqh-vW-ZxM" secondAttribute="top" id="ZTI-5J-fi6"/>
+                            <constraint firstItem="q7X-En-gdj" firstAttribute="baseline" secondItem="6GQ-jx-chw" secondAttribute="baseline" id="aUf-EN-vvQ"/>
                             <constraint firstItem="9I9-6D-yCe" firstAttribute="leading" secondItem="Mfl-GR-m9l" secondAttribute="leading" id="bhE-op-4Jl"/>
-                            <constraint firstItem="nRk-tX-d37" firstAttribute="leading" secondItem="hZK-R8-6vC" secondAttribute="trailing" constant="8" symbolic="YES" id="coh-Tf-ZHG"/>
-                            <constraint firstItem="nRk-tX-d37" firstAttribute="top" secondItem="Mfl-GR-m9l" secondAttribute="top" constant="60" id="gK2-3f-U1S"/>
-                            <constraint firstItem="q7X-En-gdj" firstAttribute="top" secondItem="nRk-tX-d37" secondAttribute="bottom" constant="8" symbolic="YES" id="l3g-Jy-9yu"/>
-                            <constraint firstItem="6GQ-jx-chw" firstAttribute="baseline" secondItem="q7X-En-gdj" secondAttribute="baseline" id="ldI-Wm-FVM"/>
-                            <constraint firstItem="hZK-R8-6vC" firstAttribute="baseline" secondItem="nRk-tX-d37" secondAttribute="baseline" id="oLu-oR-k1P"/>
-                            <constraint firstItem="hZK-R8-6vC" firstAttribute="leading" secondItem="Mfl-GR-m9l" secondAttribute="leading" constant="20" symbolic="YES" id="wFB-9z-ZAs"/>
-                            <constraint firstItem="q7X-En-gdj" firstAttribute="leading" secondItem="nRk-tX-d37" secondAttribute="leading" id="y2A-x4-kFJ"/>
+                            <constraint firstItem="4O1-Jd-2VJ" firstAttribute="leading" secondItem="nRk-tX-d37" secondAttribute="trailing" constant="8" symbolic="YES" id="dLU-fG-iR2"/>
+                            <constraint firstItem="nRk-tX-d37" firstAttribute="leading" secondItem="hZK-R8-6vC" secondAttribute="trailing" constant="8" symbolic="YES" id="q1O-xC-fwf"/>
+                            <constraint firstAttribute="trailing" secondItem="4O1-Jd-2VJ" secondAttribute="trailing" constant="27" id="sCE-NS-kIc"/>
+                            <constraint firstItem="6GQ-jx-chw" firstAttribute="leading" secondItem="hZK-R8-6vC" secondAttribute="leading" id="yB0-lm-DJo"/>
+                            <constraint firstItem="4O1-Jd-2VJ" firstAttribute="centerY" secondItem="hZK-R8-6vC" secondAttribute="centerY" id="yON-XD-7dp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="minutes" destination="nRk-tX-d37" id="Zdf-l6-Q02"/>
+                        <outlet property="minutesInput" destination="nRk-tX-d37" id="rug-m8-CcW"/>
+                        <outlet property="minutesStepper" destination="4O1-Jd-2VJ" id="6Ib-IL-7o0"/>
                         <outlet property="seconds" destination="q7X-En-gdj" id="If5-1M-Kb8"/>
+                        <outlet property="secondsInput" destination="q7X-En-gdj" id="mgV-l5-IZf"/>
+                        <outlet property="secondsStepper" destination="hqh-vW-ZxM" id="wP9-CI-BpG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jW3-14-jfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,7 +372,7 @@
                     <navigationItem key="navigationItem" title="Speakers List" id="D1v-cf-8Zq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="si0-3W-c9Z">
                             <connections>
-                                <action selector="addButtonPressed:" destination="0Zz-t8-YaG" id="h7m-zh-x1V"/>
+                                <segue destination="04T-FK-FGs" kind="modal" id="GbD-p2-ykV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

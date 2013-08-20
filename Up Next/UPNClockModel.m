@@ -7,6 +7,7 @@
 //
 
 #import "UPNClockModel.h"
+#import "UPNAlarmModel.h"
 
 
 
@@ -18,6 +19,7 @@
 @property (assign, nonatomic) UPNMinute alarmMinutes;
 @property (assign, nonatomic) UPNSecond alarmSeconds;
 @property (strong, nonatomic) ClockAlarm alarm;
+@property (strong, nonatomic) UPNAlarmModel *alarmModel;
 @property (assign, nonatomic) BOOL alarmSounded;
 @end
 
@@ -95,6 +97,13 @@
     self.alarm = alarm;
     self.alarmMinutes = minutes;
     self.alarmSeconds = seconds;
+}
+
+-(void)atAlarm:(UPNAlarmModel*)alarm soundAlarm:(ClockAlarm)clockAlarm
+{
+    if ([alarm soundAlarmForMinutes:self.minutes seconds:self.seconds]){
+        clockAlarm();
+    }
 }
 
 - (BOOL)alarmShouldBeSounded

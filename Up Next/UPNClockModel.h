@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UPNAlarmModel.h"
 
 #define SECONDS_IN_A_MINUTE 60
 #define MINUTES_IN_A_HOUR 60
@@ -27,6 +28,7 @@ typedef unsigned int UPNSecond;
 -(void)decrementByMinutes:(UPNMinute)minutes decrementBySeconds:(UPNSecond)seconds;
 -(void)reset;
 -(void)atMinutes:(UPNMinute)minutes seconds:(UPNSecond)seconds soundAlarm:(ClockAlarm)alarm;
+-(void)atAlarm:(UPNAlarmModel*)alarm soundAlarm:(ClockAlarm)clockAlarm;
 -(NSString *)minutesAsString;
 -(NSString *)secondsAsString;
 -(NSString *)originalMinutesAsString;

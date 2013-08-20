@@ -9,7 +9,10 @@
 #import "UPNTimeUpdateViewController.h"
 
 @interface UPNTimeUpdateViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *minutesInput;
+@property (weak, nonatomic) IBOutlet UITextField *secondsInput;
+@property (weak, nonatomic) IBOutlet UIStepper *minutesStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *secondsStepper;
 @property (strong, nonatomic) NSString *defaultMinutes;
 @property (strong, nonatomic) NSString *defaultSeconds;
 
@@ -30,6 +33,54 @@
 - (IBAction)cancel:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)valueChangeMinuteStepper:(UIStepper *)sender {
+    [self setMinutesField:sender.value];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSCharacterSet *charSet = [[NSCharacterSet decimalDigitCharacterSet]invertedSet];
+    NSRange rangeOfBadChars = [string rangeOfCharacterFromSet:charSet];
+    if(rangeOfBadChars.length == 0){
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (void)setSecondField:(double)value {
+    self.seconds.text = [NSString stringWithFormat:@"%.0f", value];
+}
+
+- (void)setMinutesField:(double)value {
+    self.minutes.text = [NSString stringWithFormat:@"%.0f", value];
+}
+
+- (IBAction)valueChangeSecondStepper:(UIStepper *)sender {
+    [self setSecondField:sender.value];
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    if (self.minutesInput == textField) {
+        self.minutesStepper.value = 1;
+        double delayInSeconds = 0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self setMinutesField:1];
+        });
+    } else {
+        self.secondsStepper.value = 0;
+        double delayInSeconds = 0;
+        
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self setSecondField:0];
+        });
+    }
+    
+    return YES;
+}
 
 -(void)setDefaultMinutes:(NSString *)minutes seconds:(NSString *)seconds
 {
@@ -44,13 +95,11 @@
     self.minutes.text = self.defaultMinutes;
     self.seconds.text = self.defaultSeconds;
     [self.minutes becomeFirstResponder];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
